@@ -6,39 +6,41 @@ const Header = () => {
     return (
         <View style={styles.header}> 
             <Text style={styles.header_text}>WhatsApp</Text>
-            <View style={styles.icons}>
-                <FontAwesome name="search" size={22} color="white" />
-                <Entypo style={styles.menu} name="dots-three-vertical" size={22} color="white" />
-            </View>
         </View>
     )
 }
 
 
+const HeaderRight =()=>{
+    return(
+        <View style={styles.icons}>
+            <FontAwesome name="search" size={22} color="white" />
+            <Entypo style={styles.menu} name="dots-three-vertical" size={22} color="white" />
+        </View>
+    )
+}
+
 import { StyleSheet } from 'react-native'
 
 const styles = StyleSheet.create({
     header:{
-        backgroundColor: '#128C7E',
-        paddingTop:30,
-        paddingBottom:20,
         flexDirection:'row',
-        paddingHorizontal:10,
+        alignItems:'center',
+        justifyContent:'space-between'
     },
     header_text:{
         fontSize:24,
         color:'white',
+        fontWeight:'bold',
         marginRight:'auto',
-        fontWeight:'bold'
-    },
+        },
     icons:{
         flexDirection:'row',
-        justifyContent: 'space-between',
     },
     menu:{
         marginLeft:20,
     }
 })
 
-export default Header;
+export {Header, HeaderRight};
 
